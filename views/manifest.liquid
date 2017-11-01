@@ -1,0 +1,28 @@
+{%- set global from story id:'global' -%}{
+  "name": "Stahlstadt JS",
+  "short_name": "stahlstadtjs",
+  "icons": [{
+      "src": "https:{{ global.content.favicon | resize: '192x192' }}",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https:{{ global.content.favicon | resize: '256x256' }}",
+      "sizes": "256x256",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https:{{ global.content.favicon | resize: '384x384' }}",
+      "sizes": "384x384",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https:{{ global.content.favicon | resize: '512x512' }}",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7df1e",
+  "theme_color": "#000000"
+}

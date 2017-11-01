@@ -1,0 +1,85 @@
+{% spaceless %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StahlstadtJS - The JavaScript Meetup in Linz</title>
+  
+  <meta name="generator" content="storyblok"> 
+  <meta name="cms" content="https://www.storyblok.com"> 
+  <meta name="description" content="StahlstadtJS is the JavaScript Meetup in Linz - lets meetup at unique companies and brands to talk about javascript.">
+  <meta property="og:title" content="StahlstadtJS - The JavaScript Meetup in Linz"> 
+  <meta property="og:description" content="StahlstadtJS is the JavaScript Meetup in Linz - lets meetup at unique companies and brands to talk about javascript."> 
+  <meta property="og:image" content="https://img2.storyblok.com/1400x0/f/41584/1076x774/1543ec7d81/stahlstadt-share.png"> 
+  <meta property="og:image:secure_url" content="https://img2.storyblok.com/1400x0/f/41584/1076x774/1543ec7d81/stahlstadt-share.png"> 
+  <meta property="og:image:type" content="image/png"> 
+  <meta property="og:image:width" content="1400"> 
+  <meta property="og:image:height" content="1007"> 
+  <meta property="og:image:alt" content="StahlstadtJS"> 
+
+  {% if proxy_mode %}
+    <link href="{{ 'assets/css/above.css' | asset_url }}" rel="stylesheet">
+  {% else %}
+    <style>{%- include 'above_fold_css' -%}</style>
+  {% endif %}
+
+  {% set global from story id:'global' %}
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ global.content.favicon | resize: '57x57' }}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ global.content.favicon | resize: '60x60' }}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ global.content.favicon | resize: '72x72' }}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ global.content.favicon | resize: '76x76' }}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ global.content.favicon | resize: '114x114' }}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ global.content.favicon | resize: '120x120' }}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ global.content.favicon | resize: '144x144' }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ global.content.favicon | resize: '152x152' }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ global.content.favicon | resize: '180x180' }}">
+  <link rel="icon" type="image/png" href="{{ global.content.favicon | resize: '32x32' }}" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ global.content.favicon | resize: '192x192' }}" sizes="192x192">
+  <link rel="icon" type="image/png" href="{{ global.content.favicon | resize: '96x96' }}" sizes="96x96">
+  <link rel="icon" type="image/png" href="{{ global.content.favicon | resize: '16x16' }}" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="preload" id="stylesheet" href="{{ 'assets/css/below.css' | asset_url }}" as="style" onload="this.rel='stylesheet'">
+</head>
+<body>
+
+  <main id="main" role="main">
+    {% include story.content.component with blok: story.content, title: story.name, date: story.created_at %}
+    {% include 'js_org' %}
+  </main>
+
+  <script type="text/javascript" src="{{ 'assets/js/scripts.js' | asset_url }}"></script>
+
+  {% if story.content._editable %}
+    <script type="text/javascript" src="//app.storyblok.com/storyblok-latest.js"></script>
+    <script type="text/javascript">
+
+      storyblok.init({
+        accessToken: '{{ public_token }}'
+      });
+
+      storyblok.on('change', function() {
+        location.reload(true);
+      });
+
+      storyblok.pingEditor(function() {
+        if (storyblok.inEditor) {
+          storyblok.enterEditmode();
+        }
+      });
+
+    </script>
+  {% endif %}
+
+  <script>
+  /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+  !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+
+  /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+  !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+  </script>
+</body>
+</html>
+{% endspaceless %}

@@ -1,0 +1,32 @@
+// Insert your ES6 javascript here
+
+console.log('--------------------------------------------------');
+console.log('----------------------:ydy------------------------');
+console.log('---------------------:dMMMs-----------------------');
+console.log('---------------------/MMMMM/----------------------');
+console.log('---------------------/MMMMM+----------------------');
+console.log('---------------------/MMMMMd----------------------');
+console.log('---------------------/MMMMMd----------------------');
+console.log('---------------------:NMMMMo----------------------');
+console.log('----------------------NMMMMo----------------------');
+console.log('----------------------yMMMm-----------------------');
+console.log('-----------------------+mh+-----------------------');
+console.log('----------------------oyyyy:-----:oyhdhhyo:-------');
+console.log('----------------------yMMMM:----yMMMMMMMMMMy:-----');
+console.log('----------------------yMMMM:---hMMMMhooyNMmy/-----');
+console.log('----------------------yMMMM:---NMMMm----:/--------');
+console.log('----------------------yMMMM:---yMMMMms+:----------');
+console.log('----------------------yMMMM:----yNMMMMMMmy+-------');
+console.log('----------------------yMMMM:-----:ohNMMMMMMNs-----');
+console.log('----------------------yMMMM:---------:oyNMMMMy----');
+console.log('----------------/-----hMMMM:----+o-------mMMMN----');
+console.log('-------------+hNMmo//oNMMMm--:hNMMms+::/sMMMMm----');
+console.log('-------------+mMMMMMMMMMMN/---+mMMMMMMMMMMMMd:----');
+console.log('---------------+hmNMMNmho:------/shmNMMNNdy+------');
+console.log('--------------------------------------------------');
+console.log('--------------------------------------------------');
+console.log('');
+console.log('Welcome to StahlstadtJS.');
+console.log('You can find us on Meetup: https://www.meetup.com/stahlstadt-js');
+console.log('And also on twitter: https://twitter.com/stahlstadtjs');
+console.log('Guess we\'re also on facebook: https://www.facebook.com/stahlstadtjs/');
